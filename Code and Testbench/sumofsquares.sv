@@ -42,6 +42,7 @@ always_ff@(posedge clk) begin
  	if(!reset) begin
 		if(enable_f) begin
 			f<=ad1;
+			vout<=1;
 		end
 	end		
 	else
