@@ -10,7 +10,9 @@ always_ff @(posedge clk) begin
 		if (enable_a) begin
 			d1<=a;
 		end
-	end 
+	end else 
+		d1<=0;
+end
 always_comb begin
 
 			m1=d1;
@@ -41,7 +43,10 @@ always_ff@(posedge clk) begin
 		if(enable_f) begin
 			f<=ad1;
 		end
-    end
+	end		
+	else
+		f<=0;
+end
 endmodule
 
 			
